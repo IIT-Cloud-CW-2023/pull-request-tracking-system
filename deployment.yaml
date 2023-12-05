@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pull-request-tracking-system
+  labels:
+    app: pull-request-tracking-system
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pull-request-tracking-system
+  template:
+    metadata:
+      labels:
+        app: pull-request-tracking-system
+    spec:
+      containers:
+        - name: pull-request-tracking-system
+          image: gcr.io/PROJECT_ID/IMAGE:TAG  # Replace with your Docker Hub image and tag
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+          resources:
+            requests:
+              cpu: "50m"
+              memory: "80Mi"
+            limits:
+              cpu: "500m"
+              memory: "512Mi"
