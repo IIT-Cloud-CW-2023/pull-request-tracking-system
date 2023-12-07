@@ -1,0 +1,11 @@
+server:
+  port: 9091
+
+github:
+  pulls-detail-url: https://api.github.com/repos/kenshoo/python-style-guide/pulls?state=open&fields=url,number,title,created_at,updated_at,user.login
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://hiranjanperera7532:xxBcZHIuBBZhoAwL@iit-cluster.ea0cis1.mongodb.net/Dev-IQ-Tracker
+
