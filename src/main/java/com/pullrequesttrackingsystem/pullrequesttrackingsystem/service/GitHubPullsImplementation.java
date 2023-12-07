@@ -18,22 +18,22 @@ public class GitHubPullsImplementation implements GitHubPullsService{
 
 
     @Override
-    public List<GitHubPull> gitHubPulls() {
-        List<GitHubPull> gitHubPulls = new ArrayList<>();
+    public List<GitHubPull> getGitHubPull() {
+        List<GitHubPull> gitHubPull = new ArrayList<>();
         List<GitHubPullDto> gitHubPullsDtoList = this.gitHubExternalPulls.getPullsDetails();
         gitHubPullsDtoList.forEach(gitHubPullDto -> {
-            GitHubPull gitHubPull = this.generateGitHubPullsObject(gitHubPullDto);
-            gitHubPulls.add(gitHubPull);
+            GitHubPull gitHubPulls = this.generateGitHubPullsObject(gitHubPullDto);
+            gitHubPull.add(gitHubPulls);
         });
-        this.gitHubPullsRepository.saveAll(gitHubPulls);
-        return gitHubPulls;
+        this.gitHubPullsRepository.saveAll(gitHubPull);
+        return gitHubPull;
     }
-
 
     @Override
-    public List<GitHubPull> getAllHubIssues() {
+    public List<GitHubPull> getAllHubPull() {
         return this.gitHubPullsRepository.findAll();
     }
+
 
     private GitHubPull generateGitHubPullsObject(GitHubPullDto gitHubPullDto) {
         return GitHubPull.builder()
