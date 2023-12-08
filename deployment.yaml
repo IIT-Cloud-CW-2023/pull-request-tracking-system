@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: pull-request-tracking-system
-          image: gcr.io/PROJECT_ID/IMAGE:TAG  # Replace with your Docker Hub image and tag
+          image: gcr.io/iitcloudcw/pull-request-tracking-system:prod  # Replace with your Docker Hub image and tag
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
