@@ -3,6 +3,7 @@ server:
   servlet:
     context-path: /api/v1/pull-request-tracking-system
 
+
 github:
   pulls-detail-url: https://api.github.com/repos/kenshoo/python-style-guide/pulls?state=open&fields=url,number,title,created_at,updated_at,user.login
 spring:
