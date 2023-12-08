@@ -5,6 +5,7 @@ metadata:
 spec:
   selector:
     app: pull-request-tracking-system
+  type: NodePort
   ports:
     - protocol: TCP
       port: 80
