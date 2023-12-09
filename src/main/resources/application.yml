@@ -9,5 +9,5 @@ github:
 spring:
   data:
     mongodb:
-      uri: mongodb+srv://hiranjanperera7532:xxBcZHIuBBZhoAwL@iit-cluster.ea0cis1.mongodb.net/Dev-IQ-Tracker
+      uri: mongodb+srv://hiranjan20231914:Clfyr9SCLLNSrNhg@iitcloud.fjpgsya.mongodb.net/Dev-IQ-Tracker
 
